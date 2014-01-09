@@ -80,7 +80,7 @@ Sub DisplayUsage
                  "" & vbCrLf & _
                  "Sample usage with scripts:" & vbCrLf & _
                  "" & vbCrLf & _
-                 "    elevate wscript ""C:\windows\system32\slmgr.vbs"" �dli" & vbCrLf & _
+                 "    elevate wscript ""C:\windows\system32\slmgr.vbs"" -dli" & vbCrLf & _
                  "" & vbCrLf & _
                  "    elevate powershell -NoExit -Command & 'C:\Temp\Test.ps1'" & vbCrLf & _
                  "" & vbCrLf & _
