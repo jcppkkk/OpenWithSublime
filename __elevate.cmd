@@ -30,4 +30,5 @@
 set ELEVATE_CMDLINE=%*
 set ELEVATE_APP=%1
 
+taskkill /f /im sublime_text.exe
 start wscript //nologo "%~dpn0.vbs" %*

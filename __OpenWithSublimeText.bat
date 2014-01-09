@@ -20,10 +20,10 @@ reg add "HKEY_CLASSES_ROOT\*\shell\%entryName%"         /t REG_SZ /v "" /d "%men
 reg add "HKEY_CLASSES_ROOT\*\shell\%entryName%"         /t REG_EXPAND_SZ /v "Icon" /d "%stPath%,0" /f
 reg add "HKEY_CLASSES_ROOT\*\shell\%entryName%\command" /t REG_SZ /v "" /d "%stPath% \"%%1\"" /f
 
-echo # add it for all file types as admin. You need to close all sublime instance inorder to open target with Administrative permission.
+echo # add it for all file types as admin
 reg add "HKEY_CLASSES_ROOT\*\shell\%entryNameAsAdmin%"         /t REG_SZ /v "" /d "%menuTextAsAdmin%"   /f
 reg add "HKEY_CLASSES_ROOT\*\shell\%entryNameAsAdmin%"         /t REG_EXPAND_SZ /v "Icon" /d "%stPath%,0" /f
-reg add "HKEY_CLASSES_ROOT\*\shell\%entryNameAsAdmin%\command" /t REG_SZ /v "" /d "%elevatePath% %stPath% -n \"%%1\"" /f
+reg add "HKEY_CLASSES_ROOT\*\shell\%entryNameAsAdmin%\command" /t REG_SZ /v "" /d "%elevatePath% %stPath% \"%%1\"" /f
 
 echo # add it for folders
 reg add "HKEY_CLASSES_ROOT\Folder\shell\%entryName%"         /t REG_SZ /v "" /d "%menuText%" /f
