@@ -1,4 +1,13 @@
 @echo off
+@rem ==================
+@rem Source:  
+@rem     https://gist.github.com/jcppkkk/8330314
+@rem Description: 
+@rem     Install context menu to allow user opens file with Sublime Text as User or Admin, or Open Folder with Sublime Text.
+@rem Usage:
+@rem     Download zip and execute all to in Sublime Text's installation folder.
+@rem     Execute this script.
+@rem ==================
 @rem \"%stPath%\"   : Path to Sublime Text installation dir.
 @rem %entryName%: Key name for the registry entry.
 @rem %menuText% : Context menu text. Set your preferred menu text (e.g.: translate to your language).
