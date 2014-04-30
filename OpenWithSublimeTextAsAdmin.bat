@@ -5,8 +5,8 @@
 @rem Description: 
 @rem     Install context menu to allow user opens file with Sublime Text as User or Admin, or Open Folder with Sublime Text.
 @rem Usage:
-@rem     Download zip and execute all to in Sublime Text's installation folder.
-@rem     Execute this script.
+@rem     Download this .bat file to in Sublime Text's installation folder.
+@rem     Execute this batch file. It will download elevate codes and setup context menu.
 @rem ==================
 @rem \"%stPath%\"   : Path to Sublime Text installation dir.
 @rem %entryName%: Key name for the registry entry.
