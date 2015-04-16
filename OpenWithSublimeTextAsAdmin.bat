@@ -15,13 +15,13 @@ SET file_elevate.vbs=%~dp0__elevate.vbs
 SET file_uninstall.bat=%~dp0OpenWithSublimeText-uninstall.bat
 
 if not exist "%file_elevate.cmd%" (
-	call :download "https://gist.githubusercontent.com/jcppkkk/8330314/raw/3d863b0d5de7b47cb177f0571ffa232d27a3869e/__elevate.cmd" "%file_elevate.cmd%"
+	call :download "https://gist.github.com/jcppkkk/8330314/raw/99e41c37c89554268026028874d208aec1bb4073/__elevate.cmd" "%file_elevate.cmd%"
 )
 if not exist "%file_elevate.vbs%" (
-	call :download "https://gist.githubusercontent.com/jcppkkk/8330314/raw/2b89b316d6af469db513a02d156c9a315d684fd0/__elevate.vbs" "%file_elevate.vbs%"
+	call :download "https://gist.github.com/jcppkkk/8330314/raw/64d5f472ae679d0b85ac6579fa5917c0a96a5468/__elevate.vbs" "%file_elevate.vbs%"
 )
 if not exist "%file_uninstall.bat%" (
-	REM call :download "https://gist.githubusercontent.com/jcppkkk/8330314/raw/2b89b316d6af469db513a02d156c9a315d684fd0/__elevate.vbs" "%file_uninstall.bat%"
+	call :download "https://gist.github.com/jcppkkk/8330314/raw/6dbf9c50104f80d38b86d0cb552f33f47f3c343f/OpenWithSublimeText-uninstall.bat" "%file_uninstall.bat%"
 )
 
 call :check_Permissions
