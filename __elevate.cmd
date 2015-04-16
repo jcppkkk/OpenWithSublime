@@ -29,6 +29,5 @@
 :: through environment variables.
 set ELEVATE_CMDLINE=%*
 set ELEVATE_APP=%1
-
-taskkill /f /im sublime_text.exe
+if not DEFINED openwithsublime_elevation taskkill /f /im sublime_text.exe
 start wscript //nologo "%~dpn0.vbs" %*
