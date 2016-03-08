@@ -1,6 +1,6 @@
 @echo off
 
-SET elevate.CmdPath=%~dp0__elevate.cmd
+SET elevate.CmdPath=%~dp0OpenWithSublime_elevate.cmd
 
 call :check_Permissions
 
