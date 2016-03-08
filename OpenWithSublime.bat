@@ -24,7 +24,7 @@ reg add "%REG_BASE%"            /t REG_SZ           /v ""       /d "%UserMenuTex
 reg add "%REG_BASE%"            /t REG_EXPAND_SZ    /v "Icon"   /d "\"%stPath%\",0"         /f
 reg add "%REG_BASE%\command"    /t REG_SZ           /v ""       /d "\"%stPath%\" \"%%1\""   /f
 echo Add context menu entry for all file types, open as admin
-SET REG_BASE=HKEY_CLASSES_ROOT\*\shell\%UserEntry%\%AdminEntry%
+SET REG_BASE=HKEY_CLASSES_ROOT\*\shell\%AdminEntry%
 reg add "%REG_BASE%"           /t REG_SZ            /v ""       /d "%AdminMenuText%"        /f
 reg add "%REG_BASE%"           /t REG_EXPAND_SZ     /v "Icon"   /d "\"%stPath%\",0"         /f
 reg add "%REG_BASE%\command"   /t REG_SZ            /v ""       /d "\"%F_ELEVATE_CMD%\" \"%stPath%\" \"%%1\"" /f
