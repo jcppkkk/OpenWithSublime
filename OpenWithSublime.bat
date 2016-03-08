@@ -40,7 +40,6 @@ SET REG_BASE=HKEY_CLASSES_ROOT\Directory\Background\shell\%UserEntry%
 @reg add "%REG_BASE%"           /t REG_SZ           /v ""       /d "%UserMenuText%"         /f
 @reg add "%REG_BASE%"           /t REG_EXPAND_SZ    /v "Icon"   /d "\"%stPath%\",0"         /f
 @reg add "%REG_BASE%\command"   /t REG_SZ           /v ""       /d "\"%stPath%\" \"%%V\""   /f
-pause
 
 echo ===================================
 echo All done! press any key to leave.
