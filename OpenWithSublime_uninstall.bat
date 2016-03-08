@@ -17,6 +17,7 @@ SET entryNameAsAdmin=Sublime Text As Admin
 REG DELETE "HKEY_CLASSES_ROOT\*\shell\%entryName%" /f
 REG DELETE "HKEY_CLASSES_ROOT\*\shell\%entryNameAsAdmin%" /f
 REG DELETE "HKEY_CLASSES_ROOT\Folder\shell\%entryName%" /f
+REG DELETE "HKEY_CLASSES_ROOT\Directory\Background\shell\%entryName%" /f
 
 
 :check_Permissions

@@ -23,20 +23,24 @@ SET REG_BASE=HKEY_CLASSES_ROOT\*\shell\%UserEntry%
 reg add "%REG_BASE%"            /t REG_SZ           /v ""       /d "%UserMenuText%"         /f
 reg add "%REG_BASE%"            /t REG_EXPAND_SZ    /v "Icon"   /d "\"%stPath%\",0"         /f
 reg add "%REG_BASE%\command"    /t REG_SZ           /v ""       /d "\"%stPath%\" \"%%1\""   /f
-
-echo ===================================
 echo Add context menu entry for all file types, open as admin
 SET REG_BASE=HKEY_CLASSES_ROOT\*\shell\%UserEntry%\%AdminEntry%
-reg add "%REG_BASE%"           /t REG_SZ          /v ""       /d "%AdminMenuText%"        /f
-reg add "%REG_BASE%"           /t REG_EXPAND_SZ   /v "Icon"   /d "\"%stPath%\",0"         /f
-reg add "%REG_BASE%\command"   /t REG_SZ          /v ""       /d "\"%F_ELEVATE_CMD%\" \"%stPath%\" \"%%1\"" /f
-echo ===================================
+reg add "%REG_BASE%"           /t REG_SZ            /v ""       /d "%AdminMenuText%"        /f
+reg add "%REG_BASE%"           /t REG_EXPAND_SZ     /v "Icon"   /d "\"%stPath%\",0"         /f
+reg add "%REG_BASE%\command"   /t REG_SZ            /v ""       /d "\"%F_ELEVATE_CMD%\" \"%stPath%\" \"%%1\"" /f
 
-SET REG_BASE=HKEY_CLASSES_ROOT\Folder\shell\%UserEntry%
+echo ===================================
 echo Add context menu entry for folders
-reg add "%REG_BASE%"           /t REG_SZ          /v ""       /d "%UserMenuText%"         /f
-reg add "%REG_BASE%"           /t REG_EXPAND_SZ   /v "Icon"   /d "\"%stPath%\",0"         /f
-reg add "%REG_BASE%\command"   /t REG_SZ          /v ""       /d "\"%stPath%\" \"%%1\""   /f
+SET REG_BASE=HKEY_CLASSES_ROOT\Folder\shell\%UserEntry%
+reg add "%REG_BASE%"           /t REG_SZ            /v ""       /d "%UserMenuText%"         /f
+reg add "%REG_BASE%"           /t REG_EXPAND_SZ     /v "Icon"   /d "\"%stPath%\",0"         /f
+reg add "%REG_BASE%\command"   /t REG_SZ            /v ""       /d "\"%stPath%\" \"%%1\""   /f
+echo Add context menu entry for directories background
+SET REG_BASE=HKEY_CLASSES_ROOT\Directory\Background\shell\%UserEntry%
+@reg add "%REG_BASE%"           /t REG_SZ           /v ""       /d "%UserMenuText%"         /f
+@reg add "%REG_BASE%"           /t REG_EXPAND_SZ    /v "Icon"   /d "\"%stPath%\",0"         /f
+@reg add "%REG_BASE%\command"   /t REG_SZ           /v ""       /d "\"%stPath%\" \"%%V\""   /f
+pause
 
 echo ===================================
 echo All done! press any key to leave.
