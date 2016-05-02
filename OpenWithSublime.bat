@@ -62,7 +62,7 @@ if %errorLevel% == 0 (
 
 :download
 if not exist %2 (
-	"C:\Windows\System32\WindowsPowerShell\v1.0\powershell" "$wc = New-Object System.Net.WebClient;$wc.DownloadFile('%1', '%2')"
+	"C:\Windows\System32\WindowsPowerShell\v1.0\powershell" "$wc = New-Object System.Net.WebClient;$wc.DownloadFile(^"%1", ^"%2")"
 	echo Download %2
 )
 goto :EOF
