@@ -9,12 +9,12 @@ SET "UserMenuText=Open with Sublime(&-)"
 SET "AdminMenuText=Open with Sublime As Admin(&+)"
 
 SET GIST_WORKSPACE=https://gist.github.com/jcppkkk/8330314/raw
-SET F_ELEVATE_CMD=%~dp0OpenWithSublime_elevate.cmd
-SET F_ELEVATE_VBS=%~dp0OpenWithSublime_elevate.vbs
-SET F_UNINSTALL=%~dp0OpenWithSublime_uninstall.bat
-call :download "%GIST_WORKSPACE%/OpenWithSublime_elevate.cmd" "%F_ELEVATE_CMD%"
-call :download "%GIST_WORKSPACE%/OpenWithSublime_elevate.vbs" "%F_ELEVATE_VBS%"
-call :download "%GIST_WORKSPACE%/OpenWithSublime_uninstall.bat" "%F_UNINSTALL%"
+SET F_ELEVATE_CMD=OpenWithSublime_elevate.cmd
+SET F_ELEVATE_VBS=OpenWithSublime_elevate.vbs
+SET F_UNINSTALL=OpenWithSublime_uninstall.bat
+call :download %GIST_WORKSPACE%/%F_ELEVATE_CMD% %F_ELEVATE_CMD%
+call :download %GIST_WORKSPACE%/%F_ELEVATE_VBS% %F_ELEVATE_VBS%
+call :download %GIST_WORKSPACE%/%F_UNINSTALL% %F_UNINSTALL%
 call :check_Permissions
 
 echo ===================================
@@ -61,8 +61,8 @@ if %errorLevel% == 0 (
 )
 
 :download
-if not exist %2 (
-    "C:\Windows\System32\WindowsPowerShell\v1.0\powershell" "$wc = New-Object System.Net.WebClient;$wc.DownloadFile(^"%1", ^"%2")"
+if not exist "%CD%\%2" (
+    C:\Windows\System32\WindowsPowerShell\v1.0\powershell "$wc = New-Object System.Net.WebClient;$wc.DownloadFile(\"%1\", \"%2\")"
     echo Download %2
 )
 goto :EOF
