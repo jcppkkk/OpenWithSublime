@@ -1,6 +1,7 @@
 @echo off
 :: Path to Sublime Text installation dir.
 SET stPath=%~dp0sublime_text.exe
+SET stPathOnly=%~dp0
 :: Key name for the registry entries.
 SET UserEntry=Sublime Text
 SET AdminEntry=Sublime Text As Admin
@@ -27,7 +28,7 @@ echo Add context menu entry for all file types, open as admin
 SET REG_BASE=HKEY_CLASSES_ROOT\*\shell\%AdminEntry%
 reg add "%REG_BASE%"            /t REG_SZ           /v ""       /d "%AdminMenuText%"        /f
 reg add "%REG_BASE%"            /t REG_EXPAND_SZ    /v "Icon"   /d "\"%stPath%\",0"         /f
-reg add "%REG_BASE%\command"    /t REG_SZ           /v ""       /d "\"%F_ELEVATE_CMD%\" \"%stPath%\" \"%%1\"" /f
+reg add "%REG_BASE%\command"    /t REG_SZ           /v ""       /d "\"%stPathOnly%%F_ELEVATE_CMD%\" \"%stPath%\" \"%%1\"" /f
 
 echo ===================================
 echo Add context menu entry for folders
