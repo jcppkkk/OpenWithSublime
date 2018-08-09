@@ -1,5 +1,7 @@
 # OpenWithSublime
 
+![Image of OpenWithSublime](https://i.imgur.com/Q1VRgnd.jpg)
+
 Add context menu to allow user open file or folder with Sublime as User or Admin.
 
 ## Installation
