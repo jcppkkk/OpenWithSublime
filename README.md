@@ -1,5 +1,7 @@
 # OpenWithSublime
 
+Add context menu to quickly open things with Sublime Text
+
 ![Image of OpenWithSublime](https://i.imgur.com/Q1VRgnd.jpg)
 
 ## Features
