@@ -1,15 +1,15 @@
 @echo off
 :: Path to Sublime Text installation dir.
-SET stPath=%~dp0sublime_text.exe
-SET stPathOnly=%~dp0
+SET "stPath=%~dp0sublime_text.exe"
+SET "stPathOnly=%~dp0"
 :: Key name for the registry entries.
-SET UserEntry=Sublime Text
-SET AdminEntry=Sublime Text As Admin
+SET "UserEntry=Sublime Text"
+SET "AdminEntry=Sublime Text As Admin"
 :: Context menu texts.
 SET "UserMenuText=Open with Sublime(&-)"
 SET "AdminMenuText=Open with Sublime As Admin(&+)"
 
-SET GIST_WORKSPACE=https://gist.github.com/jcppkkk/8330314/raw
+SET GIST_WORKSPACE=https://raw.githubusercontent.com/jcppkkk/OpenWithSublime/master
 SET F_ELEVATE_CMD=OpenWithSublime_elevate.cmd
 SET F_ELEVATE_VBS=OpenWithSublime_elevate.vbs
 SET F_UNINSTALL=OpenWithSublime_uninstall.bat
