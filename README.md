@@ -2,7 +2,19 @@
 
 ![Image of OpenWithSublime](https://i.imgur.com/Q1VRgnd.jpg)
 
-Add context menu to allow user open file or folder with Sublime as User or Admin.
+## Features
+
+### Open anything with Sublime Text
+* Edit file with Sublime Text
+* Open folder with Sublime Text
+* Right click at folder background to open it with Sublime Text
+
+### Advanced Editing for engineer
+* Open Sublime Text with admin privilege.
+
+### UI/UX
+* Show Sublime Text ICON in menu
+* Entry shortcut "`-`" and "`+`"  :point_up:
 
 ## Installation
 
