@@ -32,7 +32,7 @@ reg add "%REG_BASE%\command"    /t REG_SZ           /v ""       /d "\"%stPathOnl
 
 echo ===================================
 echo Add context menu entry for folders
-SET REG_BASE=HKEY_CLASSES_ROOT\Folder\shell\%UserEntry%
+SET REG_BASE=HKEY_CLASSES_ROOT\Directory\shell\%UserEntry%
 reg add "%REG_BASE%"            /t REG_SZ           /v ""       /d "%UserMenuText%"         /f
 reg add "%REG_BASE%"            /t REG_EXPAND_SZ    /v "Icon"   /d "\"%stPath%\",0"         /f
 reg add "%REG_BASE%\command"    /t REG_SZ           /v ""       /d "\"%stPath%\" \"%%1\""   /f
